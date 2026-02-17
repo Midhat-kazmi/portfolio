@@ -23,61 +23,55 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-purple-50 to-pink-50 px-6 py-16">
-      
+
       {/* Heading */}
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-linear-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
         My Projects
       </h2>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        
-        {projects.map(project => (
-          <div
-            key={project.id}
-            className="bg-white rounded-3xl shadow-md overflow-hidden 
-                       hover:shadow-2xl hover:-translate-y-2 
-                       transition-all duration-300 
-                       flex flex-col"
-          >
-            
-            {/* Project Image */}
-            <div className="overflow-hidden">
+      {/* Grid */}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl">
+
+          {projects.map(project => (
+            <div
+              key={project.id}
+              className="bg-white w-80 rounded-2xl shadow-md overflow-hidden 
+                         hover:shadow-lg hover:-translate-y-1 
+                         transition duration-300"
+            >
+
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-64 object-cover 
-                           transform hover:scale-105 
-                           transition duration-500"
+                className="w-full h-40 object-cover"
               />
-            </div>
 
-            {/* Project Content */}
-            <div className="p-8 flex flex-col grow">
-              
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                {project.title}
-              </h3>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {project.title}
+                </h3>
 
-              <p className="text-gray-600 mb-6 grow leading-relaxed">
-                {project.shortDesc}
-              </p>
+                <p className="text-sm text-gray-600 mb-4">
+                  {project.shortDesc}
+                </p>
 
-              <Link
-                to={`/project/${project.id}`}
-                className="mt-auto inline-block px-6 py-3 rounded-full 
-                           bg-purple-600 text-white text-sm font-semibold 
-                           hover:bg-purple-700 hover:shadow-lg
-                           transition text-center"
-              >
-                View Details →
-              </Link>
+                <Link
+                  to={`/project/${project.id}`}
+                  className="inline-block text-sm px-4 py-2 rounded-full 
+                             bg-purple-600 text-white 
+                             hover:bg-purple-700 transition"
+                >
+                  View Details →
+                </Link>
+              </div>
 
             </div>
-          </div>
-        ))}
+          ))}
 
+        </div>
       </div>
+
     </div>
   );
 };
