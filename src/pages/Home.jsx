@@ -154,7 +154,7 @@ const Home = () => {
           <div>
 
             <p className="text-purple-600 font-semibold mb-3">
-              Full Stack Software Engineer
+              Software Engineer
             </p>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
