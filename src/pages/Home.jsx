@@ -236,13 +236,7 @@ const Home = () => {
                 className="w-80 md:w-112.5 rounded-3xl shadow-2xl"
               />
 
-              <div className="absolute -top-5 -left-5 bg-white shadow-lg rounded-xl px-4 py-2">
-                AWS & DevOps
-              </div>
-
-              <div className="absolute -bottom-5 -right-5 bg-white shadow-lg rounded-xl px-4 py-2">
-                MERN Stack
-              </div>
+             
 
             </div>
 
