@@ -138,9 +138,10 @@ export default function About() {
         <Link to="/" style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-0.5px", color: "#0A0A0A", textDecoration: "none" }}>
           MIDHAT
         </Link>
-        <ul className="nav-links-desktop" style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
-          <li><Link to="/about" className="nav-link active">About</Link></li>
-          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        <ul className="nav-desktop" style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
+          <li><Link to="/" className="nav-link">Home</Link></li>
+          <li><Link to="/about" className="nav-link">About</Link></li>
+          <li><Link to="/contact" className="nav-link active">Contact</Link></li>
           <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
