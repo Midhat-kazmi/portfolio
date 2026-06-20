@@ -227,10 +227,9 @@ export default function Home() {
           MIDHAT
         </Link>
         <ul className="nav-desktop" style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
-          {/* Scroll anchors stay on home; other pages use Link */}
-          <li><a href="/about"    className="nav-link">About</a></li>
-       
-          <li><Link to="/contact"   className="nav-link">Contact</Link></li>
+          <li><Link to="/" className="nav-link">Home</Link></li>
+          <li><Link to="/about" className="nav-link">About</Link></li>
+          <li><Link to="/contact" className="nav-link active">Contact</Link></li>
           <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
