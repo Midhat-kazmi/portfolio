@@ -4,20 +4,46 @@ const projects = [
   {
     id: "shopora",
     title: "Shopora",
-    image: "https://res.cloudinary.com/dgve6ewpr/image/upload/v1752440757/Untitled_c8xmgv.jpg",
-    desc: "Multi-vendor eCommerce platform with role-based access for buyers, sellers, and admins. Stripe payments and real-time order notifications via WebSockets, plus interactive seller dashboards for product, order, and revenue management.",
-    demo: "https://lnkd.in/dnhi43q5",
-    tags: ["React", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Stripe", "WebSockets"],
+    image:
+      "https://res.cloudinary.com/dgve6ewpr/image/upload/v1752440757/Untitled_c8xmgv.jpg",
+    desc:
+      "A production-ready multi-vendor eCommerce platform built with the MERN stack. Features role-based dashboards for buyers, sellers, and administrators, Stripe payment integration, real-time order updates via WebSockets, product management, analytics, order tracking, and secure authentication. Designed to deliver a complete marketplace experience with scalability and performance in mind.",
+    demo: "https://multivendor-five.vercel.app/",
+    github: "https://github.com/Midhat-kazmi/multivendor",
+    youtube: "https://youtu.be/HaiTALxGr_I?si=1B2p860txwENLMW0",
+    tags: [
+      "React",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+      "WebSockets",
+      "JWT",
+      "Cloudinary",
+    ],
   },
+
   {
     id: "lms",
     title: "Learning Management System",
-    image: "https://res.cloudinary.com/dgve6ewpr/image/upload/v1770577615/WhatsApp_Image_2026-02-08_at_11.52.07_PM_yibqpr.jpg",
-    desc: "Modern LMS built with Next.js and TypeScript featuring authentication, dashboards, and course management.",
+    image:
+      "https://res.cloudinary.com/dgve6ewpr/image/upload/v1770577615/WhatsApp_Image_2026-02-08_at_11.52.07_PM_yibqpr.jpg",
+    desc:
+      "A modern Learning Management System built with Next.js and TypeScript. Includes secure authentication, student and instructor dashboards, course creation and enrollment workflows, video-based learning, progress tracking, and scalable backend architecture for managing educational content and users.",
     demo: "https://client-lms-olive.vercel.app/",
-    tags: ["Next.js", "TypeScript", "MongoDB", "AWS", "Docker"],
+    github: "https://github.com/Midhat-kazmi/Client-LMS",
+    youtube: "https://youtu.be/VbCKtrVaQPo?si=nQwNUyHtBpO7m7V_",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Tailwind CSS",
+      "Authentication",
+    ],
   },
- 
 ];
 
 const skills = [
@@ -418,7 +444,6 @@ export default function Home() {
                 </div>
                 <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
                   {p.demo && <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">Live Demo →</a>}
-                  <Link to={`/project/${p.id}`} className="project-link" style={{ color: "#6B6B6B" }}>Case Study →</Link>
                 </div>
               </div>
             </div>
