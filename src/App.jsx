@@ -3,7 +3,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
 import ProjectDetail from './pages/ProjectDetail';
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
        <Route path="/project/:id" element={<ProjectDetail />} />
 
         <Route path="/contact" element={<Contact />} /> {/* Contact form */}
-        <Route path="*" element={<NotFound />} />       {/* 404 page */}
       </Routes>
     </Router>
   );

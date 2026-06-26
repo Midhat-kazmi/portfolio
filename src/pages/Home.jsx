@@ -274,7 +274,14 @@ export default function Home() {
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: "2rem" }}>
           <a href="#projects" className="btn-primary">View Projects</a>
           <Link to="/contact" className="btn-outline">Get In Touch</Link>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-outline">Download CV</a>
+        <a
+    href="https://drive.google.com/uc?export=download&id=1G6J_B8_pxfIvpR916TALCsK5VaN3gKUH"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-outline"
+  >
+    Download CV
+  </a>
         </div>
 
         {/* social links */}
