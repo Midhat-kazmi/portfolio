@@ -166,13 +166,14 @@ const Portfolio = () => {
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact" className="btn-primary">Start a Conversation</Link>
    <a
-  href="/Midhat_resume.pdf"
+  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
   target="_blank"
   rel="noopener noreferrer"
   className="btn-outline"
 >
-  Download CV
-</a>       </div>
+  Download Resume
+</a> 
+     </div>
       </section>
 
       {/* ══ FOOTER ══ */}

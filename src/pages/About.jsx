@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 
 const timeline = [
-  {
-    year: "2026",
-    title: "Freelance MERN Stack Developer",
-    place: "Self-Employed · Remote",
-    desc: "Took on client projects end-to-end — scoping, building, and deploying custom MERN stack applications with RESTful APIs and responsive React frontends.",
-  },
+ 
   {
     year: "2025",
     title: "MERN Stack Developer",
@@ -19,18 +14,7 @@ const timeline = [
     place: "Virtual University of Pakistan",
     desc: "Completed my degree, having spent the prior years building progressively more complete projects alongside coursework.",
   },
-  {
-    year: "2022",
-    title: "Frontend Developer Intern",
-    place: "B-Source · Pakistan",
-    desc: "Built responsive, reusable UI components with React.js and Tailwind CSS, and integrated backend APIs to render dynamic content.",
-  },
-  {
-    year: "2020",
-    title: "Started BS Software Engineering",
-    place: "Virtual University of Pakistan",
-    desc: "Began formal studies in software engineering, where my interest in building complete, working applications first took shape.",
-  },
+  
 ];
 
 const values = [
@@ -142,7 +126,6 @@ export default function About() {
           <li><Link to="/" className="nav-link">Home</Link></li>
           <li><Link to="/about" className="nav-link">About</Link></li>
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
 
@@ -169,8 +152,14 @@ export default function About() {
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a href="mailto:ksyedamidhat@gmail.com" className="btn-primary">Get In Touch</a>
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-outline">Download CV</a>
-            </div>
+<a
+  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-outline"
+>
+  Download Resume
+</a>            </div>
           </div>
 
           {/* Quick facts panel */}

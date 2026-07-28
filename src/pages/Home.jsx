@@ -88,34 +88,17 @@ const contactLinks = [
 ];
 
 const experience = [
-  {
-    role: "Freelance MERN Stack Developer",
-    place: "Self-Employed · Remote",
-    period: "Feb '26 — Apr '26",
-    bullets: [
-      "Developed and delivered custom full-stack web applications for clients using the MERN stack, managing projects end-to-end.",
-      "Built RESTful APIs and responsive React frontends tailored to client requirements, ensuring cross-browser compatibility.",
-    ],
-  },
-  {
+ {
     role: "MERN Stack Developer",
     place: "InfinitySoftSolutionz · Lahore, Pakistan",
-    period: "Aug '25 — Dec '25",
+    period: "Aug '25 — Feb '26",
     bullets: [
       "Built scalable full-stack applications using the MERN stack, delivering features across buyer, seller, and admin roles.",
       "Designed RESTful APIs with Node.js/Express.js and implemented JWT-based authentication with role-based authorization.",
       "Integrated the Stripe payment gateway and Cloudinary media storage for complete transaction and media management.",
     ],
   },
-  {
-    role: "Frontend Developer Intern",
-    place: "B-Source · Pakistan",
-    period: "Mar '22 — May '22",
-    bullets: [
-      "Built responsive, reusable UI components using React.js and Tailwind CSS, improving cross-device compatibility.",
-      "Integrated backend APIs to render dynamic content and optimized layouts for performance and cross-browser consistency.",
-    ],
-  },
+ 
 ];
 
 export default function Home() {
@@ -230,7 +213,7 @@ export default function Home() {
           <li><Link to="/" className="nav-link">Home</Link></li>
           <li><Link to="/about" className="nav-link">About</Link></li>
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
+          <li><a href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
 
@@ -274,14 +257,14 @@ export default function Home() {
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: "2rem" }}>
           <a href="#projects" className="btn-primary">View Projects</a>
           <Link to="/contact" className="btn-outline">Get In Touch</Link>
-        <a
-    href="https://drive.google.com/uc?export=download&id=1G6J_B8_pxfIvpR916TALCsK5VaN3gKUH"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn-outline"
-  >
-    Download CV
-  </a>
+    <a
+  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-outline"
+>
+  Download Resume
+</a> 
         </div>
 
         {/* social links */}
@@ -307,8 +290,7 @@ export default function Home() {
       {/* ══ STATS ══ */}
       <div className="stats-bar" style={{ maxWidth: 900, margin: "0 auto", padding: "3rem 2rem", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }}>
         {[
-          { number: "1+",     label: "Year of Experience" },
-          { number: "3",      label: "Production Projects" },
+          { number: "6",     label: "Months" },
           { number: "MERN",   label: "Stack Specialist" },
           { number: "Stripe", label: "Payments Integrated" },
         ].map((s) => (
@@ -428,9 +410,7 @@ export default function Home() {
             <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", color: "#B0B0B0" }}>05</span>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.5px" }}>Featured Projects</h2>
           </div>
-          <Link to="/portfolio" style={{ fontSize: 12, fontWeight: 600, color: "#6B6B6B", textDecoration: "none", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            View All →
-          </Link>
+        
         </div>
         <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "#EBEBEB", border: "1px solid #EBEBEB" }}>
           {projects.map((p) => (
