@@ -290,7 +290,6 @@ export default function Home() {
       {/* ══ STATS ══ */}
       <div className="stats-bar" style={{ maxWidth: 900, margin: "0 auto", padding: "3rem 2rem", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }}>
         {[
-          { number: "6",     label: "Months" },
           { number: "MERN",   label: "Stack Specialist" },
           { number: "Stripe", label: "Payments Integrated" },
         ].map((s) => (

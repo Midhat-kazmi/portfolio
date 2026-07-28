@@ -167,7 +167,6 @@ export default function About() {
             {[
               { label: "Role", value: "Full Stack Developer (MERN)" },
               { label: "Focus", value: "MERN + Stripe + WebSockets" },
-              { label: "Experience", value: "6 months"},
               { label: "Education", value: "BS Software Engineering" },
               { label: "Available", value: "Freelance & Full-time" },
               { label: "Location", value: "Lahore, Pakistan" },
