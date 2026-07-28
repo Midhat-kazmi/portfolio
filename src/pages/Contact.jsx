@@ -124,7 +124,7 @@ const Contact = () => {
           <li><Link to="/" className="nav-link">Home</Link></li>
           <li><Link to="/about" className="nav-link">About</Link></li>
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
+          <li><a href="/https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
 

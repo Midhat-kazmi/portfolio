@@ -106,7 +106,7 @@ const Portfolio = () => {
           <li><a href="/skills" className="nav-link">Skills</a></li>
           <li><Link to="/portfolio" className="nav-link active">Projects</Link></li>
           <li><Link to="/contact" className="nav-link">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
+          <li><a href="/https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
 

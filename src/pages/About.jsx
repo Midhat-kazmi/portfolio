@@ -153,7 +153,7 @@ export default function About() {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a href="mailto:ksyedamidhat@gmail.com" className="btn-primary">Get In Touch</a>
 <a
-  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+  href="https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link"
   target="_blank"
   rel="noopener noreferrer"
   className="btn-outline"

@@ -106,7 +106,7 @@ const Portfolio = () => {
           <li><a href="/skills" className="nav-link">Skills</a></li>
           <li><Link to="/portfolio" className="nav-link active">Projects</Link></li>
           <li><Link to="/contact" className="nav-link">Contact</Link></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
+          <li><a href="/https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
       </nav>
 
@@ -166,7 +166,7 @@ const Portfolio = () => {
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/contact" className="btn-primary">Start a Conversation</Link>
    <a
-  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+  href="https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link"
   target="_blank"
   rel="noopener noreferrer"
   className="btn-outline"

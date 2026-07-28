@@ -291,13 +291,13 @@ export default function Home() {
         <li><Link to="/contact" className="nav-link active" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         <li>
           <a
-            href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+            href="https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             className="nav-link nav-cta"
             onClick={() => setMenuOpen(false)}
           >
-            Resume ↗
+            Resume
           </a>
         </li>
       </ul>
