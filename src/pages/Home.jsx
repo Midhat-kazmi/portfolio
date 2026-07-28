@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const projects = [
@@ -102,7 +103,7 @@ const experience = [
 ];
 
 export default function Home() {
- 
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", background: "#fff", color: "#0A0A0A", fontSize: 15, lineHeight: 1.6 }}>
@@ -187,6 +188,56 @@ export default function Home() {
           to   { transform: translateX(-50%); }
         }
 
+        /* ── MOBILE NAV TOGGLE ── */
+        .nav-toggle {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          width: 32px;
+          height: 32px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+        .nav-toggle span {
+          display: block;
+          width: 22px;
+          height: 2px;
+          background: #0A0A0A;
+          transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .nav-mobile {
+          position: fixed;
+          top: 60px; left: 0; right: 0;
+          background: #fff;
+          border-bottom: 1px solid #EBEBEB;
+          display: flex; flex-direction: column;
+          list-style: none;
+          z-index: 99;
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height 0.3s ease;
+        }
+        .nav-mobile.open { max-height: 400px; }
+        .nav-mobile li { border-bottom: 1px solid #EBEBEB; }
+        .nav-mobile .nav-link {
+          display: block;
+          padding: 16px 2rem;
+          font-size: 14px;
+        }
+        .nav-mobile .nav-cta {
+          display: inline-block;
+          margin: 16px 2rem;
+          padding: 10px 18px;
+        }
+
         @media (max-width: 768px) {
           .about-grid    { grid-template-columns: 1fr !important; }
           .skills-grid   { grid-template-columns: 1fr !important; }
@@ -195,6 +246,7 @@ export default function Home() {
           .contact-wrap  { grid-template-columns: 1fr !important; }
           .stats-bar     { grid-template-columns: repeat(2, 1fr) !important; }
           .nav-desktop   { display: none !important; }
+          .nav-toggle    { display: flex !important; }
         }
       `}</style>
 
@@ -206,16 +258,49 @@ export default function Home() {
         padding: "0 2rem", height: 60,
         display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
-        <Link to="/" style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-0.5px", color: "#0A0A0A", textDecoration: "none" }}>
+        <Link
+          to="/"
+          onClick={() => setMenuOpen(false)}
+          style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-0.5px", color: "#0A0A0A", textDecoration: "none" }}
+        >
           MIDHAT
         </Link>
+
         <ul className="nav-desktop" style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
           <li><Link to="/" className="nav-link">Home</Link></li>
           <li><Link to="/about" className="nav-link">About</Link></li>
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
           <li><a href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR" target="_blank" rel="noreferrer" className="nav-link nav-cta">Resume ↗</a></li>
         </ul>
+
+        <button
+          className={`nav-toggle${menuOpen ? " open" : ""}`}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
+
+      <ul className={`nav-mobile${menuOpen ? " open" : ""}`}>
+        <li><Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About</Link></li>
+        <li><Link to="/contact" className="nav-link active" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+        <li>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link nav-cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Resume ↗
+          </a>
+        </li>
+      </ul>
 
       {/* ══ HERO ══ */}
       <section id="hero" style={{ maxWidth: 900, margin: "0 auto", padding: "130px 2rem 80px" }}>
@@ -287,18 +372,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ══ STATS ══ */}
-      <div className="stats-bar" style={{ maxWidth: 900, margin: "0 auto", padding: "3rem 2rem", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }}>
-        {[
-          { number: "MERN",   label: "Stack Specialist" },
-          { number: "Stripe", label: "Payments Integrated" },
-        ].map((s) => (
-          <div key={s.label}>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, letterSpacing: "-1px", color: "#0A0A0A", lineHeight: 1, marginBottom: 4 }}>{s.number}</div>
-            <div style={{ fontSize: 12, color: "#6B6B6B", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.label}</div>
-          </div>
-        ))}
-      </div>
+     
 
       <hr style={{ maxWidth: 900, margin: "0 auto", border: "none", borderTop: "1px solid #EBEBEB" }} />
 
