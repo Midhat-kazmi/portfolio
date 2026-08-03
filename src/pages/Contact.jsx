@@ -125,14 +125,16 @@ const Contact = () => {
           <li><Link to="/about" className="nav-link">About</Link></li>
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
 <li>
+  <li>
   <a
-    href="/https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link"
+    href="/Midhat_resume.pdf"
     target="_blank"
-    rel="noreferrer"
+    rel="noopener noreferrer"
     className="nav-link nav-cta"
   >
     Resume ↗
   </a>
+</li>
 </li>        </ul>
       </nav>
 
