@@ -350,14 +350,14 @@ export default function Home() {
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: "2rem" }}>
           <a href="#projects" className="btn-primary">View Projects</a>
           <Link to="/contact" className="btn-outline">Get In Touch</Link>
-    <a
-  href="https://drive.google.com/uc?export=download&id=1dkwm8vRMUPN2dfdwifHkkYDt9AKnn2LR"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn-outline"
->
-  Download Resume
-</a> 
+  <a
+    href="/Midhat_resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="nav-link nav-cta"
+  >
+    Resume ↗
+  </a>
         </div>
 
         {/* social links */}

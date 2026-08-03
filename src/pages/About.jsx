@@ -152,16 +152,7 @@ export default function About() {
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a href="mailto:ksyedamidhat@gmail.com" className="btn-primary">Get In Touch</a>
-<li>
-  <a
-    href="/Midhat_resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="nav-link nav-cta"
-  >
-    Resume ↗
-  </a>
-</li>         </div>
+        </div>
           </div>
 
           {/* Quick facts panel */}
