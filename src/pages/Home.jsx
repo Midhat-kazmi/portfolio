@@ -272,14 +272,14 @@ export default function Home() {
           <li><Link to="/contact" className="nav-link active">Contact</Link></li>
 <li>
   <a
-    href="/https://drive.google.com/file/d/1KKJwvwLZ3kbS7RhOd0zYQoMZDBjl1l3Z/view?usp=drive_link"
+    href="/Midhat_resume.pdf"
     target="_blank"
-    rel="noreferrer"
+    rel="noopener noreferrer"
     className="nav-link nav-cta"
   >
     Resume ↗
   </a>
-</li>        </ul>
+</li>      </ul>
 
         <button
           className={`nav-toggle${menuOpen ? " open" : ""}`}
